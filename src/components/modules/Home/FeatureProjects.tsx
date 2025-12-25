@@ -8,9 +8,9 @@ export function FeatureProjects({ projects }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="w-full py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-950"
+      className="w-full py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gray-50 dark:bg-gray-950"
     >
-      <div className="container mx-auto relative z-10 flex flex-col items-center gap-16 px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-7xl mx-auto relative z-10 flex flex-col items-center gap-16">
         {/* Header */}
         <div className="text-center">
           <h2 className="mx-auto mb-6 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl lg:max-w-3xl">
@@ -23,11 +23,11 @@ export function FeatureProjects({ projects }: ProjectsProps) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid gap-y-10 sm:grid-cols-12 md:mx-0 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
+        <div className="grid gap-y-10 sm:grid-cols-12 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
           {projects.slice(0, 2).map((project: Project) => (
             <Card
               key={project.id}
-              className="border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-black/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-12 lg:col-span-10 lg:col-start-2 rounded-2xl p-6 sm:p-8"
+              className="border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-black/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-12 lg:col-span-12 rounded-2xl p-6 sm:p-8"
             >
               <div className="grid gap-y-6 sm:grid-cols-10 sm:gap-x-5 md:items-center md:gap-x-8 lg:gap-x-12">
                 {/* Info Section */}

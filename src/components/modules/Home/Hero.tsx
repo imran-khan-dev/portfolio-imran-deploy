@@ -228,7 +228,8 @@ const Portfolio = () => {
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-lg leading-relaxed">
-              Full Stack Developer | JavaScript lover | Crafting frameworks and coding the future
+              Full Stack Developer | JavaScript lover | Crafting frameworks and
+              coding the future
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 sm:w-auto">

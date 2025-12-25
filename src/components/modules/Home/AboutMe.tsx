@@ -22,8 +22,8 @@ const stagger = {
 
 export function AboutMe() {
   return (
-    <section id="about" className="w-full py-24 relative bg-gray-50">
-      <div className="container mx-auto max-w-7xl px-4">
+    <section id="about" className="w-full py-24 px-4 sm:px-6 lg:px-8 relative bg-gray-50">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch"
           variants={stagger}

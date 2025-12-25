@@ -29,14 +29,14 @@ const educationData = [
 
 export function Education() {
   return (
-    <section id="education" className="py-20 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto"
         >
           <motion.h2
             variants={fadeUp}

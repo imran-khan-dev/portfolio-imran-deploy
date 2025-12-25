@@ -39,8 +39,8 @@ const stagger = {
 
 export function TechStack() {
   return (
-    <section id="techStack" className="py-24 dark:bg-gray-900">
-      <div className="container mx-auto max-w-7xl px-4">
+    <section id="techStack" className=" py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           variants={stagger}
           initial="hidden"
