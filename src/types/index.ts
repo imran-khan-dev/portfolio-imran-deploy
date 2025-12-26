@@ -83,3 +83,22 @@ export interface ISidebarItem {
     component: ComponentType;
   }[];
 }
+
+export interface ProjectDetailData {
+  id: number;
+  title: string;
+  summary: string;
+  description: string;
+  features: string[];
+  techStack: string[];
+  challenges: string[];
+  futurePlans: string[];
+  longDescription?: string | null;
+  thumbnail?: string;
+  liveUrl?: string | null;
+  repoUrl?: string | null;
+}
+
+export interface FeatureProjectsProps {
+  projects: ProjectDetailData[];
+}

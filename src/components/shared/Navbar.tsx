@@ -29,10 +29,10 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", text: "Home" },
-    { href: "#about", text: "About" },
-    { href: "#techStack", text: "Tech Stack" },
-    { href: "#projects", text: "Projects" },
-    { href: "#contact", text: "Contact" },
+    { href: "/#about", text: "About" },
+    { href: "/#techStack", text: "Tech Stack" },
+    { href: "/#projects", text: "Projects" },
+    { href: "/#contact", text: "Contact" },
   ];
 
   return (

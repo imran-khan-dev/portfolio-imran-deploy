@@ -2,9 +2,9 @@
 
 import { Github, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { ProjectsProps, Project } from "@/types";
+import { FeatureProjectsProps, Project, ProjectDetailData } from "@/types";
 
-export function FeatureProjects({ projects }: ProjectsProps) {
+export function FeatureProjects({ projects }: FeatureProjectsProps) {
   return (
     <section
       id="projects"
@@ -24,7 +24,7 @@ export function FeatureProjects({ projects }: ProjectsProps) {
 
         {/* Projects Grid */}
         <div className="grid gap-y-10 sm:grid-cols-12 sm:gap-y-12 md:gap-y-16 lg:gap-y-20">
-          {projects.slice(0, 2).map((project: Project) => (
+          {projects.slice(0, 2).map((project: ProjectDetailData) => (
             <Card
               key={project.id}
               className="border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-black/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 sm:col-span-12 lg:col-span-12 rounded-2xl p-6 sm:p-8"

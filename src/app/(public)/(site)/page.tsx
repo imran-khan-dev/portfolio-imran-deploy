@@ -1,3 +1,4 @@
+import { projects } from "@/data/projects";
 import { AboutMe } from "@/components/modules/Home/AboutMe";
 import { Education } from "@/components/modules/Home/Education";
 import { FeatureProjects } from "@/components/modules/Home/FeatureProjects";
@@ -12,8 +13,6 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  
-  
   // const resBlog = await fetch(
   //   `${process.env.NEXT_PUBLIC_BASE_API}/blog/get-blogs`,
   //   { cache: "no-store" }
@@ -21,14 +20,15 @@ export default async function HomePage() {
   // const jsonBlog = await resBlog.json().catch(() => ({ data: { data: [] } }));
   // const blogs: BlogPost[] = jsonBlog?.data?.data || [];
 
-  const resProject = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_API}/project/get-projects`,
-    { cache: "no-store" }
-  );
-  const jsonProject = await resProject
-    .json()
-    .catch(() => ({ data: { data: [] } }));
-  const projects: Project[] = jsonProject?.data?.data || [];
+  // const resProject = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BASE_API}/project/get-projects`,
+  //   { cache: "no-store" }
+  // );
+  // const jsonProject = await resProject
+  //   .json()
+  //   .catch(() => ({ data: { data: [] } }));
+  // const projects: Project[] = jsonProject?.data?.data || [];
+
   return (
     <>
       <Hero />
