@@ -38,11 +38,11 @@ const ContactPage = () => {
           <div className="flex flex-col items-center space-y-8">
             {/* Gmail */}
             <a
-              href="mailto:example@gmail.com"
+              href="mailto:imrankhan.contact.tech@gmail.com"
               className="inline-flex items-center gap-3 text-lg font-medium text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-purple-400 transition-colors"
             >
               <Mail className="w-5 h-5 text-blue-600 dark:text-purple-400" />
-              emranniloy84@gmail.com
+              imrankhan.contact.tech@gmail.com
             </a>
 
             {/* Social Links */}

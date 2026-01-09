@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Linkedin, MessageCircle, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Motion variants
@@ -22,7 +22,10 @@ const stagger = {
 
 export function AboutMe() {
   return (
-    <section id="about" className="w-full py-24 px-4 sm:px-6 lg:px-8 relative bg-gray-50">
+    <section
+      id="about"
+      className="w-full py-24 px-4 sm:px-6 lg:px-8 relative bg-gray-50"
+    >
       <div className="container mx-auto max-w-7xl">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch"
@@ -48,9 +51,9 @@ export function AboutMe() {
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
-              My journey started with a curiosity about how the web works
-              which turned into a full-time passion for clean architecture,
-              reusable components, and problem-solving through code.
+              My journey started with a curiosity about how the web works which
+              turned into a full-time passion for clean architecture, reusable
+              components, and problem-solving through code.
             </p>
 
             <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
@@ -60,16 +63,25 @@ export function AboutMe() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex gap-4 mt-4">
-              <ContactLink href="mailto:emranniloy84@gmail.com" Icon={Mail}>
-                Email
-              </ContactLink>
+            <div className="flex flex-wrap gap-4 mt-4">
               <ContactLink
-                href="https://www.linkedin.com/in/imran-khan-438213358/"
+                href="mailto:imrankhan.contact.tech@gmail.com"
+                Icon={Mail}
+              >
+                imrankhan.contact.tech@gmail.com
+              </ContactLink>
+
+              <ContactLink href="tel:+8801871624231" Icon={Phone}>
+                +880 1871-624231
+              </ContactLink>
+
+              <ContactLink
+                href="https://www.linkedin.com/in/imran-khan-dev-fullstack/"
                 Icon={Linkedin}
               >
                 LinkedIn
               </ContactLink>
+
               <ContactLink
                 href="https://wa.me/8801871624231"
                 Icon={MessageCircle}
