@@ -3,6 +3,13 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+export const generateMetadata = () => {
+  return {
+    title: "404 | Imran Khan",
+    description: "404 page of Imran Khan's portfolio",
+  };
+};
+
 export default function NotFoundPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4">

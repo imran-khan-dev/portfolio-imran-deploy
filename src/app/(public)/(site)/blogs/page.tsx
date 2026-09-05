@@ -32,7 +32,7 @@ const BLOGS = [
       "Case Study",
     ],
     createdAt: "2026-09-04",
-    readTime: "8 min read",
+    readTime: "10 min read",
   },
 ];
 

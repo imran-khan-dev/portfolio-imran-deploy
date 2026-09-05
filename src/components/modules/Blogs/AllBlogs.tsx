@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { BlogData, BlogPost } from "@/types";
 import { format } from "date-fns";
 import Loading from "@/components/ui/Loading";
+import Image from "next/image";
 
 interface AllBlogsProps {
   data: BlogData;
@@ -20,7 +21,7 @@ export default function AllBlogs({ data }: AllBlogsProps) {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/proxy/blog/get-blogs?page=${page}&limit=${pagination.limit}`
+        `/api/proxy/blog/get-blogs?page=${page}&limit=${pagination.limit}`,
       );
       const json = await res.json();
       const updatedData: BlogData = json.data;
@@ -95,7 +96,7 @@ export default function AllBlogs({ data }: AllBlogsProps) {
                       className="block"
                     >
                       <div className="aspect-[16/10] overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
-                        <img
+                        <Image
                           src={
                             post.thumbnail ||
                             "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
@@ -183,7 +184,7 @@ export default function AllBlogs({ data }: AllBlogsProps) {
                 {Array.from({ length: pagination.totalPages }, (_, i) => i + 1)
                   .slice(
                     Math.max(0, pagination.page - 3),
-                    Math.min(pagination.totalPages, pagination.page + 2)
+                    Math.min(pagination.totalPages, pagination.page + 2),
                   )
                   .map((pageNum) => (
                     <button

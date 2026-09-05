@@ -2,7 +2,7 @@
 
 import { Github, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { FeatureProjectsProps, Project, ProjectDetailData } from "@/types";
+import { FeatureProjectsProps, ProjectDetailData } from "@/types";
 
 export function FeatureProjects({ projects }: FeatureProjectsProps) {
   return (
@@ -84,7 +84,7 @@ export function FeatureProjects({ projects }: FeatureProjectsProps) {
                     {/* View Details Button */}
                     <div className="mt-6">
                       <a
-                        href={`/projects/${project.id}`}
+                        href={`/blogs/${project.id}`}
                         className="inline-block px-6 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                       >
                         View Details

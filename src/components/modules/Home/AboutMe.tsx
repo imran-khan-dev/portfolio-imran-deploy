@@ -2,6 +2,7 @@
 
 import { Mail, Linkedin, MessageCircle, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Motion variants
 const fadeUp = {
@@ -99,9 +100,11 @@ export function AboutMe() {
             {/* Gradient background */}
             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 via-purple-500/10 to-transparent rounded-3xl blur-xl"></div>
             {/* Main image */}
-            <img
-              src="https://i.imgur.com/960qgFH.jpeg"
+            <Image
+              src="/imran_khan.jpg"
               alt="Imran Khan"
+              width={500}
+              height={500}
               className="w-full h-full object-cover rounded-3xl relative z-10"
             />
           </motion.div>

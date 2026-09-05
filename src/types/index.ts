@@ -85,7 +85,7 @@ export interface ISidebarItem {
 }
 
 export interface ProjectDetailData {
-  id: number;
+  id: string;
   title: string;
   summary: string;
   description: string;
