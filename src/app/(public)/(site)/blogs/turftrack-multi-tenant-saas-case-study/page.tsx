@@ -3,6 +3,7 @@ import {
   Calendar,
   Clock,
   CheckCircle2,
+  List,
   User,
   Wrench,
   ShieldCheck,
@@ -79,12 +80,65 @@ const TurfTrackCaseStudy = async () => {
             </div>
           </header>
 
+          {/* Table of Contents */}
+          <nav
+            aria-label="Table of contents"
+            className="mb-12 p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50/80 dark:bg-gray-900/40"
+          >
+            <div className="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white mb-4">
+              <List className="w-5 h-5 text-blue-600 dark:text-purple-400" />
+              <span>Table of Contents</span>
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+              {[
+                { title: "Project Overview", id: "project-overview" },
+                { title: "The Problem", id: "the-problem" },
+                { title: "The Opportunity", id: "the-opportunity" },
+                { title: "The Solution", id: "the-solution" },
+                { title: "Key Product Decisions", id: "key-product-decisions" },
+                {
+                  title: "User Experience & Core Flow",
+                  id: "user-experience-and-core-flow",
+                },
+                {
+                  title: "Technical Architecture",
+                  id: "technical-architecture",
+                },
+                {
+                  title: "Engineering Challenges",
+                  id: "engineering-challenges",
+                },
+                {
+                  title: "Authentication & Access Control",
+                  id: "authentication-and-access-control",
+                },
+                { title: "MVP Outcome", id: "mvp-outcome" },
+                { title: "Lessons Learned", id: "lessons-learned" },
+                { title: "What I'd Improve", id: "what-id-improve" },
+                { title: "What's Next?", id: "whats-next" },
+                { title: "Final Reflection", id: "final-reflection" },
+              ].map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className="hover:text-blue-600 dark:hover:text-purple-400 transition-colors flex items-center gap-1.5"
+                  >
+                    <span className="text-blue-600 dark:text-purple-400 font-bold">
+                      •
+                    </span>
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           {/* Article Body */}
           <div className="space-y-12 text-base sm:text-lg">
             {/* 01. Project Overview */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                01. Project Overview
+              <h2 id="project-overview" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Project Overview
               </h2>
               <p>
                 TurfTrack is a SaaS turf sports management system with powerful
@@ -191,8 +245,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 02. The Problem */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                02. The Problem
+              <h2 id="the-problem" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                The Problem
               </h2>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 The Problem with Turf Management
@@ -288,8 +342,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 03. The Opportunity */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                03. The Opportunity
+              <h2 id="the-opportunity" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                The Opportunity
               </h2>
               <p>
                 I found that these hectic manual processes for owners, managers,
@@ -302,7 +356,7 @@ const TurfTrackCaseStudy = async () => {
 
               <div className="space-y-3 pt-2">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  3.1 Why Build This Product?
+                  Why Build This Product?
                 </h3>
                 <p>
                   I found a business opportunity by solving real-life problems
@@ -322,7 +376,7 @@ const TurfTrackCaseStudy = async () => {
 
               <div className="space-y-3 pt-2">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  3.2 Why a SaaS Product?
+                  Why a SaaS Product?
                 </h3>
                 <p>
                   If it were not SaaS, it could have been a completely dedicated
@@ -368,8 +422,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 04. The Solution */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                04. The Solution
+              <h2 id="the-solution" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                The Solution
               </h2>
               <p>
                 There are multiple problem-solving features I have built. The
@@ -379,7 +433,7 @@ const TurfTrackCaseStudy = async () => {
               <div className="space-y-6 mt-4">
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    i. Business Management
+                    Business Management
                   </h3>
                   <p className="mt-1">
                     If an owner has multiple turf businesses in different
@@ -391,7 +445,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    ii. Field Management
+                    Field Management
                   </h3>
                   <p className="mt-1">
                     If an owner has multiple fields in one business location,
@@ -405,7 +459,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    iii. Booking Management
+                    Booking Management
                   </h3>
                   <p className="mt-1">
                     Owners and managers can manage bookings, including
@@ -423,7 +477,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    iv. Real-Time Notifications and SMS
+                    Real-Time Notifications and SMS
                   </h3>
                   <p className="mt-1">
                     Owners, managers, and players receive notifications for
@@ -439,7 +493,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    v. Booking Analytics
+                    Booking Analytics
                   </h3>
                   <p className="mt-1">
                     Owners and managers can see detailed booking analytics in
@@ -461,7 +515,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    vi. Finance Analytics
+                    Finance Analytics
                   </h3>
                   <p className="mt-1">
                     Owners can see past revenue, upcoming revenue, and earning
@@ -482,7 +536,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    vii. Player Management
+                    Player Management
                   </h3>
                   <p className="mt-1">
                     Owners can see a list of players who have interacted with
@@ -497,7 +551,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    viii. Debt Management
+                    Debt Management
                   </h3>
                   <p className="mt-1">
                     Normally, online payments automatically handle the platform
@@ -523,8 +577,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 05. Key Product Decisions */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                05. Key Product Decisions
+              <h2 id="key-product-decisions" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Key Product Decisions
               </h2>
 
               <div className="space-y-6">
@@ -664,8 +718,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 06. User Experience & Core Flow */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                06. User Experience & Core Flow
+              <h2 id="user-experience-and-core-flow" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                User Experience & Core Flow
               </h2>
               <p className="text-sm text-gray-500 dark:text-gray-400 italic">
                 Media will be added later with text in this section.
@@ -712,8 +766,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 07. Technical Architecture */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                07. Technical Architecture
+              <h2 id="technical-architecture" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Technical Architecture
               </h2>
               <p>
                 TurfTrack is a full-stack application built with Next.js for the
@@ -759,8 +813,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 08. Engineering Challenges */}
             <section className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                08. Engineering Challenges
+              <h2 id="engineering-challenges" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Engineering Challenges
               </h2>
               <p>
                 There were several engineering challenges while building this
@@ -961,8 +1015,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 09. Authentication & Access Control */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                09. Authentication & Access Control
+              <h2 id="authentication-and-access-control" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Authentication & Access Control
               </h2>
               <p>
                 TurfTrack authentication is based on the mobile phone number
@@ -1032,8 +1086,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 10. MVP Outcome */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                10. MVP Outcome
+              <h2 id="mvp-outcome" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                MVP Outcome
               </h2>
               <p>
                 TurfTrack MVP has automated the booking management of a turf
@@ -1072,8 +1126,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 11. Lessons Learned */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                11. Lessons Learned
+              <h2 id="lessons-learned" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                Lessons Learned
               </h2>
               <p>
                 Building TurfTrack changed the way I think about full-stack
@@ -1211,8 +1265,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 12. What I&apos;d Improve */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                12. What I&apos;d Improve
+              <h2 id="what-id-improve" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                What I&apos;d Improve
               </h2>
               <p>
                 TurfTrack is a complex SaaS application, and its MVP is not
@@ -1223,7 +1277,7 @@ const TurfTrackCaseStudy = async () => {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    i. UI/UX
+                    UI/UX
                   </h3>
                   <p className="mt-1">
                     The current UI/UX is good enough for the MVP, but it still
@@ -1237,7 +1291,7 @@ const TurfTrackCaseStudy = async () => {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 dark:text-purple-400">
-                    ii. Optimization
+                    Optimization
                   </h3>
                   <p className="mt-1">
                     There are many areas where both the frontend and backend can
@@ -1262,8 +1316,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 13. What&apos;s Next? */}
             <section className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                13. What&apos;s Next?
+              <h2 id="whats-next" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+                What&apos;s Next?
               </h2>
               <p className="font-semibold text-lg text-gray-900 dark:text-white">
                 The Next Plan for TurfTrack at a Glance
@@ -1296,8 +1350,8 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 14. Final Reflection */}
             <section className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-                14. Final Reflection
+              <h2 id="final-reflection" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                Final Reflection
               </h2>
               <blockquote className="italic text-lg sm:text-xl border-l-4 border-blue-600 dark:border-purple-400 pl-4 py-2 my-4 text-gray-700 dark:text-gray-300">
                 &quot;Building TurfTrack taught me that the hardest part of a
