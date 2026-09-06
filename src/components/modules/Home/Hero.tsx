@@ -17,7 +17,7 @@ const DotIcon = () => (
 const coderData = {
   name: "Imran Khan",
   role: "Full Stack Developer",
-  seniority: "Entry-Level",
+  // seniority: "Entry-Level",
   location: "Bangladesh",
   skills: [
     // Frontend
@@ -115,14 +115,14 @@ const CoderProfileCard = () => {
               </span>
               <span className="text-zinc-600 dark:text-gray-400">&#39;,</span>
             </div>
-            <div className="pl-6">
+            {/* <div className="pl-6">
               <span className="text-zinc-800 dark:text-white">seniority:</span>
               <span className="text-zinc-600 dark:text-gray-400">&#39;</span>
               <span className="text-green-600 dark:text-green-400">
                 {coderData.seniority}
               </span>
               <span className="text-zinc-600 dark:text-gray-400">&#39;,</span>
-            </div>
+            </div> */}
             <div className="pl-6">
               <span className="text-zinc-800 dark:text-white">location:</span>
               <span className="text-zinc-600 dark:text-gray-400">&#39;</span>
@@ -202,7 +202,7 @@ const Portfolio = () => {
           <div className="flex flex-col gap-4 sm:gap-6 items-start text-left order-2 lg:order-1 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-900/80 dark:bg-white/10 border border-gray-700 dark:border-gray-600 rounded-full text-xs sm:text-sm text-gray-200 dark:text-gray-300 backdrop-blur-sm hover:bg-gray-800 dark:hover:bg-white/20 transition-all duration-300">
               <DotIcon />
-              Welcome to my universe
+              Thanks for stopping by
             </div>
 
             <div className="relative">
@@ -228,8 +228,8 @@ const Portfolio = () => {
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-lg leading-relaxed">
-              Full Stack Developer | JavaScript lover | Crafting frameworks and
-              coding the future
+              Full Stack JavaScript Developer | Crafting frameworks and coding
+              the future
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 sm:w-auto">

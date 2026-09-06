@@ -39,7 +39,10 @@ const stagger = {
 
 export function TechStack() {
   return (
-    <section id="techStack" className=" py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
+    <section
+      id="techStack"
+      className=" py-24 px-4 sm:px-6 lg:px-8 dark:bg-gray-900"
+    >
       <div className="container mx-auto max-w-7xl">
         <motion.div
           variants={stagger}
@@ -58,8 +61,8 @@ export function TechStack() {
             variants={fadeUp}
             className="mt-4 text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
-            The technologies I use to build modern, scalable, and beautiful web
-            applications.
+            The technologies I use to build modern, scalable, and user-friendly
+            web applications.
           </motion.p>
 
           <motion.div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
