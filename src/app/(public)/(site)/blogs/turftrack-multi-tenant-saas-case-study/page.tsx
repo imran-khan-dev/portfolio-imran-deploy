@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
   title: "TurfTrack Case Study | Imran Khan",
@@ -137,7 +138,10 @@ const TurfTrackCaseStudy = async () => {
           <div className="space-y-12 text-base sm:text-lg">
             {/* 01. Project Overview */}
             <section className="space-y-4">
-              <h2 id="project-overview" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="project-overview"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Project Overview
               </h2>
               <p>
@@ -245,7 +249,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 02. The Problem */}
             <section className="space-y-4">
-              <h2 id="the-problem" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="the-problem"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 The Problem
               </h2>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -342,7 +349,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 03. The Opportunity */}
             <section className="space-y-4">
-              <h2 id="the-opportunity" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="the-opportunity"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 The Opportunity
               </h2>
               <p>
@@ -422,7 +432,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 04. The Solution */}
             <section className="space-y-4">
-              <h2 id="the-solution" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="the-solution"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 The Solution
               </h2>
               <p>
@@ -577,7 +590,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 05. Key Product Decisions */}
             <section className="space-y-4">
-              <h2 id="key-product-decisions" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="key-product-decisions"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Key Product Decisions
               </h2>
 
@@ -717,56 +733,158 @@ const TurfTrackCaseStudy = async () => {
             </section>
 
             {/* 06. User Experience & Core Flow */}
-            <section className="space-y-4">
-              <h2 id="user-experience-and-core-flow" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
-                User Experience & Core Flow
-              </h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                Media will be added later with text in this section.
-              </p>
+            <section className="space-y-8">
+              <header className="space-y-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2
+                  id="user-experience-and-core-flow"
+                  className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
+                >
+                  User Experience & Core Flow
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 italic">
+                  Visual walkthroughs and interface previews for key application
+                  workflows.
+                </p>
+              </header>
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Customer Booking Flow
-                </h3>
-                <p>The customer starts by visiting the public turf profile.</p>
-                <p>From there, the player can:</p>
-                <ul className="list-disc list-inside pl-4 space-y-1">
-                  <li>Select a field</li>
-                  <li>Select one or more available slots</li>
-                  <li>Continue to checkout</li>
-                  <li>Review the booking</li>
-                  <li>Apply a promo code if available</li>
-                  <li>Select a payment option</li>
-                  <li>Complete the booking</li>
-                </ul>
-                <p>Payment options include:</p>
-                <ul className="list-disc list-inside pl-4 space-y-1">
-                  <li>Full payment</li>
-                  <li>Partial payment</li>
-                  <li>Pay later, where applicable</li>
-                </ul>
+              {/* Customer Booking Flow */}
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                    Customer Booking Flow
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                    Customers visit the public turf profile to book slots in two
+                    streamlined steps.
+                  </p>
+                </div>
+
+                {/* Step 1 */}
+                <div className="space-y-3 pl-4 border-l-2 border-slate-200 dark:border-slate-800">
+                  <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    Step 1: Selection & Review
+                  </span>
+                  <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1 pl-1">
+                    <li>Select one or more available fields</li>
+                    <li>Select preferred time slots</li>
+                    <li>Review booking summary and total pricing</li>
+                    <li>Proceed to checkout</li>
+                  </ul>
+                  <div className="pt-2">
+                    <Image
+                      src="/booking-step-one.png"
+                      alt="TurfTrack Booking Step One Interface"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="space-y-3 pl-4 border-l-2 border-slate-200 dark:border-slate-800">
+                  <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                    Step 2: Checkout & Payment
+                  </span>
+                  <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-1 pl-1">
+                    <li>Apply a promotional discount code (if available)</li>
+                    <li>
+                      Select a flexible payment method:
+                      <ul className="list-[circle] list-inside pl-6 pt-1 space-y-0.5 text-slate-500 dark:text-slate-400">
+                        <li>Full online payment</li>
+                        <li>Partial deposit payment</li>
+                        <li>Pay later at venue (where eligible)</li>
+                      </ul>
+                    </li>
+                    <li>Confirm and complete the booking</li>
+                  </ul>
+                  <div className="pt-2">
+                    <Image
+                      src="/booking-step-two.png"
+                      alt="TurfTrack Booking Step Two Checkout Interface"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm object-cover"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-2 pt-2">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Owner / Manager Flow
-                </h3>
-                <p>
-                  Owners and managers can manage bookings, fields, pricing,
-                  customers, payments, and business information from their
-                  dashboards.
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                  More screenshots and flow visuals will be added to this
-                  section.
-                </p>
+              {/* Owner / Manager Flow */}
+              <div className="space-y-6 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                    Owner & Manager Workspace
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                    Comprehensive administrative dashboard for managing
+                    schedules, fields, custom pricing, and financials.
+                  </p>
+                </div>
+
+                {/* Grid / Gallery View for Admin Screenshots */}
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+                  <div className="space-y-1.5">
+                    <Image
+                      src="/bookings.png"
+                      alt="Bookings Management Overview"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm"
+                    />
+                    <p className="text-xs text-center text-slate-500 dark:text-slate-400">
+                      Bookings Management
+                    </p>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Image
+                      src="/fields.png"
+                      alt="Field & Pitch Configuration"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm"
+                    />
+                    <p className="text-xs text-center text-slate-500 dark:text-slate-400">
+                      Field Setup & Availability
+                    </p>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Image
+                      src="/special-pricing.png"
+                      alt="Special & Peak Hour Pricing Rules"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm"
+                    />
+                    <p className="text-xs text-center text-slate-500 dark:text-slate-400">
+                      Peak & Dynamic Pricing Rules
+                    </p>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Image
+                      src="/wallet.png"
+                      alt="Financial Wallet & Revenue Tracking"
+                      width={1000}
+                      height={600}
+                      className="rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm"
+                    />
+                    <p className="text-xs text-center text-slate-500 dark:text-slate-400">
+                      Revenue & Wallet Analytics
+                    </p>
+                  </div>
+                </div>
               </div>
             </section>
 
             {/* 07. Technical Architecture */}
             <section className="space-y-4">
-              <h2 id="technical-architecture" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="technical-architecture"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Technical Architecture
               </h2>
               <p>
@@ -813,7 +931,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 08. Engineering Challenges */}
             <section className="space-y-6">
-              <h2 id="engineering-challenges" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="engineering-challenges"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Engineering Challenges
               </h2>
               <p>
@@ -1015,7 +1136,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 09. Authentication & Access Control */}
             <section className="space-y-4">
-              <h2 id="authentication-and-access-control" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="authentication-and-access-control"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Authentication & Access Control
               </h2>
               <p>
@@ -1086,7 +1210,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 10. MVP Outcome */}
             <section className="space-y-4">
-              <h2 id="mvp-outcome" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="mvp-outcome"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 MVP Outcome
               </h2>
               <p>
@@ -1126,7 +1253,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 11. Lessons Learned */}
             <section className="space-y-4">
-              <h2 id="lessons-learned" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="lessons-learned"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 Lessons Learned
               </h2>
               <p>
@@ -1265,7 +1395,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 12. What I&apos;d Improve */}
             <section className="space-y-4">
-              <h2 id="what-id-improve" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="what-id-improve"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 What I&apos;d Improve
               </h2>
               <p>
@@ -1316,7 +1449,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 13. What&apos;s Next? */}
             <section className="space-y-4">
-              <h2 id="whats-next" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
+              <h2
+                id="whats-next"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2"
+              >
                 What&apos;s Next?
               </h2>
               <p className="font-semibold text-lg text-gray-900 dark:text-white">
@@ -1350,7 +1486,10 @@ const TurfTrackCaseStudy = async () => {
 
             {/* 14. Final Reflection */}
             <section className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-              <h2 id="final-reflection" className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+              <h2
+                id="final-reflection"
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
+              >
                 Final Reflection
               </h2>
               <blockquote className="italic text-lg sm:text-xl border-l-4 border-blue-600 dark:border-purple-400 pl-4 py-2 my-4 text-gray-700 dark:text-gray-300">
