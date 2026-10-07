@@ -34,6 +34,31 @@ const BLOGS = [
     createdAt: "2026-09-04",
     readTime: "10 min read",
   },
+  {
+    id: "ask-my-pdf-ai-rag-project",
+
+    title: "Ask My PDF — Building a RAG-Powered Document Q&A System",
+
+    description:
+      "A full-stack AI engineering case study of how I built Ask My PDF, a RAG-powered document Q&A system using Next.js, FastAPI, Python, PostgreSQL, pgvector, local embeddings, and Ollama.",
+
+    thumbnail: "/ask-my-pdf-cover-2.png",
+
+    tags: [
+      "Next.js",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "pgvector",
+      "RAG",
+      "Embeddings",
+      "Ollama",
+      "AI Engineering",
+      "Case Study",
+    ],
+    createdAt: "2026-11-07",
+    readTime: "10 min read",
+  },
 ];
 
 const AllBlogsPage = async () => {
